@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "app-monkey";
+  src:url("fonts/app-monkey.eot");
+  src:url("fonts/app-monkey.eot?#iefix") format("embedded-opentype"),
+    url("fonts/app-monkey.ttf") format("truetype"),
+    url("fonts/app-monkey.svg#app-monkey") format("svg"),
+    url("fonts/app-monkey.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "app-monkey";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none !important;
+  speak: none;
+  display: inline-block;
+  text-decoration: none;
+  width: 1em;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon-link:before { content: "\e008"; }
+.icon-enter:before { content: "\e00b"; }
