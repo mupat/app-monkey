@@ -3,6 +3,7 @@
   "name": "app monkey",
   "description": "app monkey is alfred for chrome (quick access apps and pages via ALT+A)",
   "version": "0.0.1",
+  "options_page": "index.html",
   "browser_action": {
     "default_title": "app monkey",
     "default_popup": "index.html" 

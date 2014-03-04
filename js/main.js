@@ -61,6 +61,12 @@ buildListHTML = function(elementHTML) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+  $('#no').hide();
+  $('body').addClass('transition');
+  $('#options-btn').on('click', function(e){
+    $('body').toggleClass('open');
+  });
+
   chrome.management.getAll(function(allApps) {
     var html = "";
     for (var i = 0; i <= allApps.length - 1; i++) { if(allApps[i].isApp) { apps.push(allApps[i]); }};
@@ -87,9 +93,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       };
 
-      console.log('count', visibleCount);
-      if(visibleCount === 0) $('#hint').show() 
-      else $('#hint').hide()
+      if(visibleCount === 0) {
+        if($(this).val().length > 0) $('#no').show()
+        else $('#hint').show()
+      } else {
+        $('#hint').hide()
+        $('#no').hide()
+      }
 
       $('.active').removeClass('active');
       $('.visible').first().addClass('active');
